@@ -21,6 +21,7 @@ This project used Java, specifically the oracle flavored commercial JDK in tande
 
 - [W3Schools](https://www.w3schools.com/java/default.asp)
 - [Oracle JDK Docs](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html)
+- [Java Collections Framework](https://beginnersbook.com/java-collections-tutorials/)
 
 # Future Work
 
