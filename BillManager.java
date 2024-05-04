@@ -23,8 +23,7 @@ public class BillManager {
      * @param - none
      * @return - none
      */
-    public void addBill() {
-        Scanner scanner = new Scanner(System.in); // Create new scanner object
+    public void addBill(Scanner scanner) {
         System.out.print("Enter bill name: "); // Gather user input
         String name = scanner.nextLine(); // Store user input
 
@@ -42,7 +41,6 @@ public class BillManager {
 
         // Output to user that it worked
         System.out.println("New bill added successfully.");
-        scanner.close(); // Close the scanner object
     }
 
     /**
@@ -64,9 +62,8 @@ public class BillManager {
      * @param index - the index of the bill item to be edited
      * @return - none
      */
-    public void editBill(int index) {
+    public void editBill(int index, Scanner scanner) {
         if (index >= 0 && index < bills.size()) {
-            Scanner scanner = new Scanner(System.in); // Open a scanner
             Bill bill = bills.get(index); // Get the bill object
 
             // Prompt and gather information from the user
@@ -82,8 +79,6 @@ public class BillManager {
             bill.setName(newName);
             bill.setAmount(newAmount);
             bill.setDueDate(newDueDate);
-
-            scanner.close(); // Close scanner object
 
             // Advise user of success or failure
             System.out.println("Bill updated successfully.");

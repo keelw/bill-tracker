@@ -24,6 +24,7 @@ public class Main {
                 // Use a switch statement to determine the outcome of the user choice
                 switch (Integer.valueOf(userChoice)) {
                     case 1: // Load the file
+
                         manager.loadFromFile("bills.dat");
                         break;
                     case 2: // List the objects in the file
@@ -38,20 +39,22 @@ public class Main {
                         }
                         break;
                     case 3: // Add a bill to the file
-                        manager.addBill();
+                        manager.addBill(myScanner);
 
                         // Save bills to file
                         manager.saveToFile("bills.dat");
+                        myScanner.nextLine();
                         break;
                     case 4: // Edit a bill
-                        System.out.print("Enter the index of the bill you want to edit: "); // Gather input
-                        int index = myScanner.nextInt(); // Store input
-                        myScanner.nextLine(); // Consume possible newline character
+                        System.out.print("Enter the index of the bill you want to edit: ");
+                        int index = myScanner.nextInt();
+                        myScanner.nextLine();
 
-                        manager.editBill(index);
+                        manager.editBill(index, myScanner);
 
                         // Save bills to file
                         manager.saveToFile("bills.dat");
+                        myScanner.nextLine();
                         break;
                     case 5: // Delete a bill
                         System.out.print("Enter the index of the bill you want to delete: ");
@@ -66,7 +69,7 @@ public class Main {
                         break;
                     case 6: // Quit the program
                         System.out.println("Happy bill paying! Goodbye.");
-                        isRunning = false; // Make it so while loop is conditionally false
+                        isRunning = false;
                         break;
                     default:
                         break;
@@ -74,6 +77,7 @@ public class Main {
             } else {
                 // Display an error to the user if necessary
                 System.out.println("Invalid input. Please enter a valid choice.");
+                myScanner.nextLine();
             }
         }
         myScanner.close(); // Close the scanner object
