@@ -11,7 +11,7 @@ This software will act as a bill tracker application. This will be storing the d
 5. Delete bills
 6. Quit the software
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/1H9qDLq3bxo)
 
 # Development Environment
 

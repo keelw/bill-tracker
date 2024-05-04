@@ -20,7 +20,7 @@ public class BillManager {
      * to the list of bills by using the add function in the
      * bills class.
      * 
-     * @param - none
+     * @param scanner - the scanner object from main
      * @return - none
      */
     public void addBill(Scanner scanner) {
@@ -59,7 +59,8 @@ public class BillManager {
      * information that the user wants to use is passed in and
      * the bill item is updated.
      * 
-     * @param index - the index of the bill item to be edited
+     * @param index   - the index of the bill item to be edited
+     * @param scanner - the scanner object from main
      * @return - none
      */
     public void editBill(int index, Scanner scanner) {
